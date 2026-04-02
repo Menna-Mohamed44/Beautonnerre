@@ -34,6 +34,11 @@ body {
   scrollbar-color: #061340 #020818;
   margin-top: var(--navbar-height);
   overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.site-scroll * {
+  scroll-margin-top: 0;
 }
 
 .site-scroll::-webkit-scrollbar {
