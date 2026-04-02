@@ -38,11 +38,16 @@ body {
 
 @media (max-width: 768px) {
   .site-scroll {
-    scroll-snap-type: y mandatory;
+    scroll-margin-top: 0 !important;
+    scroll-behavior: auto;
   }
   
-  .site-scroll > * {
-    scroll-snap-align: start;
+  .site-scroll::before {
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: -1px;
+    visibility: hidden;
   }
 }
 
