@@ -37,10 +37,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.site-scroll * {
-  scroll-margin-top: 0;
-}
-
 .site-scroll::-webkit-scrollbar {
   width: 8px;
 }
