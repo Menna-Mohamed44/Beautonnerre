@@ -27,10 +27,6 @@ body {
   overflow: hidden;
 }
 
-html, body {
-  scroll-behavior: smooth;
-}
-
 .site-scroll {
   height:calc(100vh - var(--navbar-height));
   overflow-y: scroll;
@@ -38,7 +34,16 @@ html, body {
   scrollbar-color: #061340 #020818;
   margin-top: var(--navbar-height);
   overflow-y: auto;
-  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .site-scroll {
+    scroll-snap-type: y mandatory;
+  }
+  
+  .site-scroll > * {
+    scroll-snap-align: start;
+  }
 }
 
 .site-scroll::-webkit-scrollbar {
