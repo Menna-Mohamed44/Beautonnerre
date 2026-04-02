@@ -27,6 +27,10 @@ body {
   overflow: hidden;
 }
 
+html, body {
+  scroll-behavior: smooth;
+}
+
 .site-scroll {
   height:calc(100vh - var(--navbar-height));
   overflow-y: scroll;
