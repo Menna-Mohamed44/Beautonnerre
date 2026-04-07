@@ -32,6 +32,7 @@ export default function Home() {
                 src="/About.jpeg"
                 alt="About Us"
                 fill
+                sizes="(max-width: 767px) 320px, 256px"
                 className={styles.cardImage}
               />
             </div>
@@ -46,6 +47,7 @@ export default function Home() {
                 src="/solutions.jpeg"
                 alt="Solutions"
                 fill
+                sizes="(max-width: 767px) 320px, 256px"
                 className={styles.cardImage}
               />
             </div>
@@ -60,6 +62,7 @@ export default function Home() {
                 src="/security.jpeg"
                 alt="Security"
                 fill
+                sizes="(max-width: 767px) 320px, 256px"
                 className={styles.cardImage}
               />
             </div>
