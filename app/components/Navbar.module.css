@@ -98,8 +98,46 @@
 }
 
 @media (max-width: 768px) {
+  .navContainer {
+    justify-content: space-between;
+    padding: 0 14px;
+  }
+
+  .navLeft {
+    flex-shrink: 0;
+    min-width: 0;
+  }
+
+  .navLeft img:first-child {
+    width: 40px !important;
+    height: auto !important;
+    max-height: 40px;
+  }
+
+  .navLeft img:last-child {
+    width: 200px !important;
+    height: auto !important;
+    margin-bottom: 0.55rem;
+  }
+
   .hamburger {
     display: flex;
+    flex-shrink: 0;
+    width: 24px;
+    height: 16px;
+  }
+
+  .hamburgerLine {
+    height: 2px;
+    border-radius: 1px;
+  }
+
+  .hamburgerLine.open:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .hamburgerLine.open:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .navRight {
@@ -120,8 +158,4 @@
     display: flex;
   }
 
-  .navLeft img:last-child {
-    width: 250px;
-    height: auto;
-  }
 }
