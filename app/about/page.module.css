@@ -1,5 +1,5 @@
 .container {
-  min-height: 100vh;
+  min-height: var(--scroll-viewport-height);
   background: #212d49;
   color: white;
   display: flex;
