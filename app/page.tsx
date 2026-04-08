@@ -10,7 +10,7 @@ export default function Home() {
       >
         <div className={styles.mobileBackgroundImage}>
           <Image
-            src="/office .png"
+            src="/office-hero.png"
             alt="Background"
             fill
             className={styles.mobileBgImg}
