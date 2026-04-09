@@ -1,111 +1,85 @@
 .main {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  background-color: #212d49;
 }
 
-/* ——— Mobile: short image band + blue below ——— */
 .heroSection {
   position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  background-color: #212d49;
-}
-
-.heroTop {
-  position: relative;
-  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: clamp(20rem, 46dvh, 34rem);
-  padding: 3rem 1.5rem 2.5rem;
-  background-color: #212d49;
-  background-image: url("/office .png");
+  justify-content: flex-start;
+  padding: 6rem 1.5rem 4rem;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  /* Vertical stretch (taller %) — bottom-aligned keeps lower scene visible */
+  background-size: 101% 118%;
+  background-position: center bottom;
+  background-color: #0e1628;
+  background-image: url('/office .png');
 }
 
-.overlayBand {
+.mobileBackgroundImage {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.mobileBgImg {
+  object-fit: cover;
+  object-position: center top;
+}
+
+@media (max-width: 767px) {
+  .heroSection {
+    background: #212d49 !important;
+    min-height: auto;
+    padding-top: 0;
+  }
+
+  .mobileBackgroundImage {
+    display: block;
+  }
+  
+  .mobileBackgroundImage {
+    height: 50vh;
+  }
+  
+  .heroContent {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cardsContainer {
+    background: transparent;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    background-size: 102% 126%;
+    background-position: center -150px;
+    background-color: transparent;
+  }
+}
+
+.overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-.overlayFull {
-  display: none;
 }
 
 .heroContent {
   position: relative;
   z-index: 10;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.homeBelowHero {
-  flex: 1;
-  width: 100%;
-  padding: 1.75rem 1.5rem 3rem;
-  background-color: #212d49;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* ——— Desktop: full-height hero, image behind everything (previous layout) ——— */
-@media (min-width: 768px) {
-  .heroSection {
-    min-height: calc(100vh - var(--navbar-height));
-    justify-content: flex-start;
-    align-items: center;
-    padding: 6rem 1.5rem 4rem;
-    background-image: url("/office .png");
-    background-repeat: no-repeat;
-    background-size: 102% 126%;
-    background-position: center -150px;
-    background-color: #212d49;
-  }
-
-  .overlayFull {
-    display: block;
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-
-  .overlayBand {
-    display: none;
-  }
-
-  .heroTop {
-    min-height: 0;
-    padding: 0;
-    background-image: none;
-    background-color: transparent;
-    width: 100%;
-    align-items: center;
-  }
-
-  .heroContent {
-    margin-bottom: 10rem;
-    margin-top: 7.5rem;
-  }
-
-  .homeBelowHero {
-    flex: 0;
-    margin-top: auto;
-    padding: 0 1.5rem 1.5rem;
-    background-color: transparent;
-  }
+  margin-bottom: 10rem;
+  margin-top: 7.5rem;
 }
 
 .heroTitle {
@@ -115,7 +89,7 @@
   margin-bottom: 0.25rem;
   font-family: var(--font-playfair), serif;
   letter-spacing: 0.02em;
-  text-shadow:
+  text-shadow: 
     0 12px 20px rgba(60, 60, 60, 0.8),
     0 18px 30px rgba(60, 60, 60, 0.6),
     0 24px 40px rgba(60, 60, 60, 0.4);
@@ -135,7 +109,7 @@
   margin-bottom: 1rem;
   font-family: var(--font-playfair), serif;
   letter-spacing: 0.02em;
-  text-shadow:
+  text-shadow: 
     0 12px 20px rgba(60, 60, 60, 0.8),
     0 18px 30px rgba(60, 60, 60, 0.6),
     0 24px 40px rgba(60, 60, 60, 0.4);
@@ -150,7 +124,7 @@
 
 .getInTouchButton {
   display: inline-block;
-  background-color: #1a2849;
+  background-color: #1A2849;
   color: white;
   padding: 0.75rem 2rem;
   border-radius: 9999px;
@@ -265,3 +239,4 @@
     font-size: 1.25rem;
   }
 }
+
