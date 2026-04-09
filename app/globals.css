@@ -3,16 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  /* Bar height + notch / status inset (see Navbar.module.css .nav padding) */
-  --navbar-height: calc(90.982px + env(safe-area-inset-top, 0px));
-  /* Area below fixed nav — use for page min-heights so content isn’t sized to full 100vh */
-  --scroll-viewport-height: calc(100vh - var(--navbar-height));
-}
-
-@supports (height: 100dvh) {
-  :root {
-    --scroll-viewport-height: calc(100dvh - var(--navbar-height));
-  }
+  --navbar-height: 90.982px;
 }
 
 @theme inline {
@@ -29,12 +20,7 @@
   }
 }
 
-html {
-  height: 100%;
-}
-
 body {
-  min-height: 100%;
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
@@ -42,12 +28,12 @@ body {
 }
 
 .site-scroll {
-  height: var(--scroll-viewport-height);
-  margin-top: var(--navbar-height);
-  overflow-x: hidden;
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-y: contain;
   scrollbar-width: thin;
   scrollbar-color: #061340 #020818;
 }
