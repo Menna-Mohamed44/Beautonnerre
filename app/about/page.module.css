@@ -1,5 +1,5 @@
 .container {
-  min-height: var(--scroll-viewport-height);
+  min-height: 100vh;
   background: #212d49;
   color: white;
   display: flex;
@@ -31,65 +31,49 @@
   line-height: 1.6;
 }
 
-.cardsColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
 }
 
-.card {
-  display: flex;
-  background: rgba(26, 37, 58, 0.80);
-  border-radius: 0.75rem;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  min-height: 16rem;
-}
-
-.cardReversed {
-  display: flex;
-  flex-direction: row-reverse;
-  background: rgba(26, 37, 58, 0.80);
-  border-radius: 0.75rem;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  min-height: 16rem;
-}
-
-@media (max-width: 768px) {
-  .card,
-  .cardReversed {
-    flex-direction: column;
+@media (min-width: 768px) {
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.cardImageSection {
-  flex: 1;
-  position: relative;
-  min-height: 16rem;
+.card {
+  background: rgba(26, 37, 58, 0.80);
+  border-radius: 0.75rem;
+  padding: 1rem 2rem 2.5rem 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
 }
 
-.cardImage {
-  object-fit: cover;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-.cardTextSection {
-  flex: 1;
-  padding: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.cardIcon {
+  width: 6rem !important;
+  height: 6rem !important;
+  margin: 0 auto 0;
+  display: block;
+  object-fit: contain;
 }
 
 .cardTitle {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  font-family: var(--font-playfair), serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-align: center;
 }
 
 .cardDescription {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #9ba4b5;
-  line-height: 1.7;
+  line-height: 1.6;
 }
