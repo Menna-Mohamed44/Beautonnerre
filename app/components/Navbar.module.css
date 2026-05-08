@@ -112,6 +112,7 @@
   .logo {
     max-height: 180px !important;
     max-width: 200px !important;
+    margin-top: .3rem;
   }
 
   .hamburger {
