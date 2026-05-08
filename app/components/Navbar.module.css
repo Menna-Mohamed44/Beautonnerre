@@ -23,13 +23,14 @@
 .navLeft {
   display: flex;
   align-items: center;
-  gap: 0.001rem;
 }
 
-.navLeft img:last-child {
-  margin-bottom: 0.8rem;
-  width: 250px;
+.logo {
   height: auto;
+  max-height: 200px;
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
 }
 
 .hamburger {
@@ -108,16 +109,9 @@
     min-width: 0;
   }
 
-  .navLeft img:first-child {
-    width: 40px !important;
-    height: auto !important;
-    max-height: 40px;
-  }
-
-  .navLeft img:last-child {
-    width: 200px !important;
-    height: auto !important;
-    margin-bottom: 0.55rem;
+  .logo {
+    max-height: 180px !important;
+    max-width: 200px !important;
   }
 
   .hamburger {

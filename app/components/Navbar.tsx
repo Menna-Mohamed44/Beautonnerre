@@ -21,16 +21,11 @@ export default function Navbar() {
       <div className={styles.navContainer}>
         <div className={styles.navLeft}>
           <Image
-            src="/Logo.png"
-            alt="Logo"
-            width={50}
-            height={50}
-          />
-          <Image
-            src="/beautonnerre.png"
+            src="/Beautonnerre logo (5).png"
             alt="Beautonnerre"
-            width={220}
+            width={200}
             height={60}
+            className={styles.logo}
           />
         </div>
 

@@ -9,16 +9,11 @@ export default function Footer() {
         <div className={styles.footerTop}>
           <div className={styles.footerLeft}>
             <Image
-              src="/Logo.png"
-              alt="Logo"
-              width={40}
-              height={40}
-            />
-            <Image
-              src="/beautonnerre.png"
+              src="/Beautonnerre logo (5).png"
               alt="Beautonnerre"
               width={180}
-              height={50}
+              height={55}
+              className={styles.logo}
             />
           </div>
           
