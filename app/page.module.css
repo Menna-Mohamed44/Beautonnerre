@@ -38,7 +38,7 @@
   .heroSection {
     background: #212d49 !important;
     min-height: auto;
-    padding-top: 0;
+    padding-top:0;
   }
 
   .mobileBackgroundImage {
@@ -50,8 +50,9 @@
   }
   
   .heroContent {
-    margin-top: 2rem;
+    margin-top: 8rem !important;
     margin-bottom: 2rem;
+    transform: translateY(-40px);
   }
   
   .cardsContainer {
