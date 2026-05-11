@@ -9,7 +9,7 @@ export default function Footer() {
         <div className={styles.footerTop}>
           <div className={styles.footerLeft}>
             <Image
-              src="/Beautonnerre logo (5).png"
+              src="/Beautonnerre logo (6).png"
               alt="Beautonnerre"
               width={180}
               height={55}
