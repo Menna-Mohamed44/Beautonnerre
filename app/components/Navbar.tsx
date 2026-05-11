@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className={styles.navContainer}>
         <div className={styles.navLeft}>
           <Image
-            src="/Beautonnerre logo (5).png"
+            src="/Beautonnerre logo (6).png"
             alt="Beautonnerre"
             width={200}
             height={60}
